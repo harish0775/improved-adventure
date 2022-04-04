@@ -1,0 +1,25 @@
+header {
+  background-color: blue;
+  height: 65px; }
+  header #flex-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    header #flex-header #links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 20px;
+      margin-right: 50px; }
+      header #flex-header #links .text {
+        margin-left: 25px; }
+        header #flex-header #links .text a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.2rem;
+          text-transform: capitalize; }
+    header #flex-header #site-name {
+      margin: 20px;
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.6rem; }

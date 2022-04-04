@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+    <h1>profile section</h1>
+
+<img src="<%= profile_user.avatar %>" alt="<%=profile_user.name%>" width="100"> 
+
+<%if(locals.user.id==profile_user.id){%>
+    <form action="/users/update/<%=profile_user.id%>" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="enter name" value="<%=profile_user.name%>">
+
+        <input type="file" onchange="loadFile(event)" name="avatar" placeholder="Profile Picture">
+        <input type="submit" value="update">
+    </form>  
+<div>
+    <img id="output">
+</div>
+
+<%}else{%>
+    <p>
+        <%= profile_user.name %>
+    </p>
+<%}%>
+
+<%if(locals.user && locals.user.id!=profile_user.id){%>
+    <div>
+        <p>
+            <a href="/friends/create/?toid=<%=profile_user._id%>">
+                Make Friend
+            </a>
+        </p>
+    </div>      
+<%}%>
+
+<%if(locals.user && locals.user.id!=profile_user.id){%>
+    <div>
+        <p>
+            <a href="/friends/destroy/?toid=<%=profile_user._id%>">
+                Delete Friend
+            </a>
+        </p>
+    </div>      
+<%}%>
+
+
+<script>
+
+     var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>

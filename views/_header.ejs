@@ -1,0 +1,26 @@
+<header>
+   <div id="flex-header">
+       <div id="site-name">Codeial</div>
+       <div id="links">
+        <%if(locals.user){%>
+            <div class="text">
+                <a href="/users/profile/<%=locals.user._id%>"><%=locals.user.name%></a>
+            </div>    
+            <div class="text">
+                <a href="/users/sign-out">Sign Out</a>
+            </div>
+            
+        <%}
+        else{%>
+            
+            <div class="text">
+                <a href="/users/sign-in">Sign In</a>
+            </div>
+            <div class="text">
+                <a href="/users/sign-up">Sign Up</a>
+            </div>
+    
+        <%}%>
+       </div>
+   </div>
+</header>
