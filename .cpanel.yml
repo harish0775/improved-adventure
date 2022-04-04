@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/nodexehw/repositories/improved-adventure/
+ - /bin/cp *$DEPLOYPATH
