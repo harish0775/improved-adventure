@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+// const port = 8000;
 
 //importing cookie parser
 const cookieParser = require('cookie-parser');
@@ -94,9 +94,10 @@ app.use(customMware.setFlash);
 //use express router-----below assets
 app.use('/',require('./routes/index'));
 
-app.listen(port,function(err){
-    if(err){
-        console.log(`error in running server : ${err}`);
-    }
-    console.log(`server is running on port : ${port}`);
-})
+// app.listen(port,function(err){
+//     if(err){
+//         console.log(`error in running server : ${err}`);
+//     }
+//     console.log(`server is running on port : ${port}`);
+// })
+app.listen();

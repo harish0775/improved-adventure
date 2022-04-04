@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const dba = 'mongodb+srv://Curly-yml:XNl3fkfchrHE79xJ@cluster0.06by5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const dba = 'mongodb+srv://Node-Express:abhi@8800express@cluster0.3a6vn.mongodb.net/expressapp?retryWrites=true&w=majority';
  mongoose.connect(dba,{ useNewUrlParser: true,useUnifiedTopology: true });
 // mongoose.connect(
 //   //`mongodb+srv://mongoUser:mongoUser@cluster0.qyh17.mongodb.net/socialarray?retryWrites=true&w=majority`
